@@ -28,3 +28,28 @@ $background-opacity: 0.9;
         }
     } 
 }
+
+// Media Query Mixins
+@mixin mediaSm {
+    @media screen and (max-width: 500px) {
+        @content;       // whatever we add inside this mixin where we use it will be added here
+    }
+}
+
+@mixin mediaMd {
+    @media screen and (max-width: 768px) {
+        @content;       // whatever we add inside this mixin where we use it will be added here
+    }
+}
+
+@mixin mediaLg {
+    @media screen and (min-width: 769px) and (max-width: 1170px) {
+        @content;       // whatever we add inside this mixin where we use it will be added here
+    }
+}
+
+@mixin mediaXL {
+    @media screen and (min-width: 1171px) {
+        @content;       // whatever we add inside this mixin where we use it will be added here
+    }
+}
